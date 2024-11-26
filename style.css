@@ -1,6 +1,12 @@
 body {
     background-color: aqua;
 }
-.raiz { 
-    margin: 100px;
+.edificio { 
+    margin: 7px;
+    background-color: gray;
+    border-color: black;
+    border: solid;
+    border-width: 5px;
+    width: 20%;
+    height: 150px;
 }
