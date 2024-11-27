@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrada</title>
+    <style>
+        .botonvolver {
+            background-color: #6138f3;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .botonvolver:hover {
+            background-color: #8e71f5;
+        }
+    </style>
 </head>
 <body>
     <h1>Edificio de Cómputo</h1>
         <h2 style="color:orange">Bienvenido al Edificio de Cómputo, aquí se estudia la especialidad de Programación.</h2>
         <button onclick="location.href= 'piso1.html'">Entrar al Piso 1</button>
         <button onclick="location.href= 'piso2.html'">Subir al Piso 2</button>
+    <h1><button class="botonvolver" onclick="location.href= '../index.html'">Volver</button></h1>
 </body>
 </html>
