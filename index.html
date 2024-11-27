@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="edificio">
-        <div id="map"></div>
-    </div>
-    <script type="module" src="script.js.js"></script>
+    <iframe class="lateralBar" src="lateralBar.html" frameborder="0"></iframe>
+    <div class="image-container">
+        <img id="main-image" src="assets/piso1.jpg" alt="Imagen con botones">
+        <button class="button button1 piso1-button" onclick="togglePanel()">LC 1</button>
+        <div id="infoPanel" class="info-panel">
+            <p>Este es un panel de información que aparece al presionar el botón.</p>
+            <p>¡Puedes agregar más contenido aquí!</p>
+          </div>
+        <button class="button button2 piso1-button" onclick="location.href='lateralBar.html'">LC 2</button>
+        <button class="button button3 piso1-button">LC 3</button>
+        <button class="button button4 piso1-button">LC 4</button>
+        <button id="leader1" class="button leader1" onclick="changeImage1('assets/piso2.jpg', this)">🡼</button>
+        <button id="leader2" class="button leader2" onclick="changeImage2('assets/piso1.jpg')">🡿</button>
+      </div>
+    <script src="script.js"></script>
 </body>
 </html>
