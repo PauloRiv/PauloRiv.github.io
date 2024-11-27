@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Proyecto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Leaflet/node_modules/leaflet/dist/leaflet.css">
+    <style>
+        #map {
+      height: 500px;  /* Altura del mapa */
+      width: 100%;    /* Ancho completo */
+    }
+    </style>
 </head>
 <body>
     <div class="edificio">
-        <button onclick="location.href='laboratoComputo/edificiocomputo.html'">Entrar al Edificio de Cómputo</button>
+        <div id="map"></div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="/scr/main.js"></script>
 </body>
 </html>
