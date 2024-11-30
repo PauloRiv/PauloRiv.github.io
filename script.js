@@ -40,3 +40,12 @@
           panel.classList.add('visible'); // Mostrar
         }
       }
+
+      const iframe_lab1 = document.getElementById('iframe-lab1');
+    const container_lab1 = document.getElementById('infoPanel1');
+
+    // Ajusta el tamaño del contenedor automáticamente
+    iframe_lab1.onload = function () {
+      const iframeContentHeight = iframe_lab1.contentWindow.document.body.scrollHeight; // Obtiene la altura del contenido del iframe
+      container_lab1.style.height = iframeContentHeight + 'px';
+    };
