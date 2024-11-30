@@ -34,14 +34,16 @@ body {
 .info-panel1 {
     position: absolute;
     top: 50px; /* Ajustar para que parezca que sale del botón */
-    left: 50%;
+    left: 70%;
     transform: translateX(-50%);
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 15px;
+    padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: none; /* Oculto por defecto */
     z-index: 1000;
+    width: auto;
+    height: 325px;
   }
 
   .info-panel1.visible {
