@@ -1,5 +1,3 @@
-
-
     function changeImage1(newImage, clickedButton) {
         const image = document.getElementById('main-image');
         image.src = newImage;
@@ -33,7 +31,7 @@
       }
       
       function togglePanel() {
-        const panel = document.getElementById('infoPanel');
+        const panel = document.getElementById('infoPanel1');
         
         // Alternar la visibilidad del panel
         if (panel.classList.contains('visible')) {
