@@ -13,7 +13,7 @@
       font-family: "Montserrat", sans-serif;
       margin: 0;
       height: 100%;
-      background: linear-gradient(to bottom, #222, #444); /* Fondo del sitio */
+      background: linear-gradient(to bottom, #535050, #444); /* Fondo del sitio */
     }
 
     /* Estilo para la barra lateral */
@@ -23,7 +23,7 @@
       left: -250px; /* Comienza oculta */
       width: 250px;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(92, 87, 87, 0.9);
       color: white;
       overflow: auto;
       transition: 0.3s; /* Animación suave */
@@ -50,7 +50,7 @@
       position: fixed;
       top: 20px;
       left: 20px;
-      background: #444;
+      background: #434651;
       color: white;
       border: none;
       padding: 10px 15px;
@@ -58,6 +58,26 @@
       font-size: 16px;
       z-index: 1000; /* Siempre visible */
     }
+    .iconsBox {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .iconsBox a img{
+      width: 70px;
+      height: auto;
+    }
+
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 160px;background: #555555;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
   </style>
 </head>
 <body>
@@ -66,25 +86,38 @@
   <button class="open-btn" onclick="toggleSidebar()">☰</button>
 
   <!-- Barra lateral -->
-  <nav class="w3-sidebar" id="sidebar">
-    <img src="assets/cbtis.jpg" style="width:100%">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <img src="list-nested.svg" style="width:70%">
-      <p>MÁS</p>
-    </a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-user w3-xxlarge"></i>
-      <p>MAESTROS</p>
-    </a>
-    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <img src="bookmark.svg" style="width:70%">
-      <p>GUARDADOS</p>
-    </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-envelope w3-xxlarge"></i>
-      <p>CUENTA</p>
-    </a>
-  </nav>
+
+ <nav class="w3-sidebar" id="sidebar">
+  <!-- Avatar image in top left corner -->
+  <img src="assets/cbtis.jpg" style="width:100%">
+
+  <div class="iconsBox">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <img src="assets/info-circle.svg">
+    <p>INFO</p>
+  </a>
+  </div>
+  <div class="iconsBox">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <img src="assets/people.svg" >
+    <p>MAESTROS</p>
+  </a>
+</div>
+  <div class="iconsBox">
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <img src="assets/bookmark.svg" >
+    <p>GUARDADOS</p>
+  </a>
+</div>
+<div class="iconsBox">
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <img src="assets/person-circle.svg">
+    <p>CUENTA</p>
+  </a>
+</div>
+
+</nav>
+  
 
   <!-- Contenido principal -->
 
