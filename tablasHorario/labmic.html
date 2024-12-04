@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario Compacto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff; /* Fondo blanco */
+    }
+
+    table {
+      width: 100%; /* Ocupa todo el espacio horizontal disponible */
+      border-collapse: collapse;
+      margin: 0 auto; /* Centra la tabla */
+      font-size: 9px; /* Reduce tamaño de texto */
+    }
+
+    th, td {
+      border: 1px solid #000;
+      text-align: center;
+      padding: 2px; /* Reduce el relleno interno */
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-size: 9px; /* Encabezado más pequeño */
+    }
+
+    td {
+      font-size: 8px; /* Tamaño más pequeño para celdas */
+    }
+
+    .time-slot {
+      width: 50px; /* Reduce ancho de la columna de horas */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 12px; /* Título más pequeño */
+      margin: 5px 0;
+    }
+    h2 {
+      text-align: center;
+      font-size: 10px; /* Título más pequeño */
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>LC 4</h1>
+  <h2>CBTis No. 122</h2>
+  <table>
+    <thead>
+      <tr>
+        <th class="time-slot">Hora</th>
+        <th>Lun</th>
+        <th>Mar</th>
+        <th>Mié</th>
+        <th>Jue</th>
+        <th>Vie</th>
+        <th>Sáb</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time-slot">07:30</td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1C</td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1A</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">08:30</td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1C</td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1C</td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1A</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">09:50</td>
+        <td>103 VENEGAS<br>CULTURA DIGITAL<br>1R</td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1B</td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1A</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">10:50</td>
+        <td>103 VENEGAS<br>CULTURA DIGITAL<br>1R</td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1B</td>
+        <td>103 VENEGAS<br>CULTURA DIGITAL<br>1R</td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">12:00</td>
+        <td><br><br></td>
+        <td>24 FERNÁNDEZ<br>CULTURA DIGITAL<br>1B</td>
+        <td>125 TOLEDO<br>DESAR. APL. WEB<br>5G</td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">13:00</td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">14:00</td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">15:20</td>
+        <td><br><br></td>
+        <td><br><br></td>
+        <td>165 DE LA ROCHA<br>APL. MET. ÁGILES<br>3Q</td>
+        <td>165 DE LA ROCHA<br>FRAMEWORKS<br>3Q</td>
+        <td>165 DE LA ROCHA<br>APL. MET. ÁGILES<br>3Q</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">16:20</td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td><br><br></td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td>165 DE LA ROCHA<br>FRAMEWORKS<br>3Q</td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">17:30</td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td>165 DE LA ROCHA<br>FRAMEWORKS<br>3Q</td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td>81 ROJERO<br>DESAR. APL. WEB<br>5Q</td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-slot">18:30</td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td>165 DE LA ROCHA<br>FRAMEWORKS<br>3Q</td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td>81 ROJERO<br>DESAR. APL. WEB<br>5Q</td>
+        <td>166<br>FRAMEWORKS<br>REC</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
