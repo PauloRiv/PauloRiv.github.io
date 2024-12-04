@@ -14,19 +14,28 @@
         <img id="main-image" src="assets/piso1.jpg" alt="Imagen con botones">
       <div id="piso1">
         <button class="button button1" onclick="togglePanel('infoPanel1')">LC 1</button>
-        <div id="infoPanel1" class="info-panel1">
+        <div id="infoPanel1" class="info-panel-right">
           <iframe id="iframe-lab1" src="tablasHorario/lab1.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
           </div>
         <button class="button button2" onclick="togglePanel('infoPanel2')">LC 2</button>
-        <div id="infoPanel2" class="info-panel1">
+        <div id="infoPanel2" class="info-panel-right">
           <iframe id="iframe-lab2" src="tablasHorario/lab2.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
         </div>
-        <button class="button button3">LC 3</button>
-        <button class="button button4">LC 4</button>
+        <button class="button button3 " onclick="togglePanel('infoPanel3')">LC 3</button>
+        <div id="infoPanel3" class="info-panel-left">
+          <iframe id="iframe-lab3" src="tablasHorario/lab3.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+          </div>
+        <button class="button button4" onclick="togglePanel('infoPanel4')" >LC 4</button>
+        <div id="infoPanel4" class="info-panel-left">
+          <iframe id="iframe-lab4" src="tablasHorario/lab4.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+          </div>
         <button id="leader1" class="button leader1 " onclick="cambioPiso('assets/piso2.jpg', 'piso1','piso2')">🡼</button>
     </div>
     <div id="piso2" class="piso-2">
-        <button class="button buttonMic">LC-M</button>
+        <button class="button buttonMic" onclick="togglePanel('infoPanelMic')">LC-M</button>
+        <div id="infoPanelMic" class="info-panel-left">
+          <iframe id="iframe-labMic" src="tablasHorario/labmic.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+          </div>
         <button id="leader2" class="button leader2" onclick="cambioPiso('assets/piso1.jpg', 'piso2', 'piso1')">🡿</button>
       </div>
       </div>
