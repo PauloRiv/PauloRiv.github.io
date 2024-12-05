@@ -3,35 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Barra de Búsqueda con Sugerencias</title>
     <style>
-        .barra{
-            background-color: white;
-            display: flex;
-            border-color: black;
-            border-width: 2px;
-            border-style: solid;
-            border-radius: 2em;
-            padding: 5px;
-            width: 150px;
-            height: auto;
-        }
-        .barra img {
-            width: 20px;
-            height: auto;
-        }
-        .barra input{
-            border: none;
-            outline: none;
-            margin-left: 10px;
-            width: 100px;
-        }
+ /* styles.css */
+
+/* Restringe el estilo al iframe o al contenedor específico */
+.search-container {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 5px;
+}
+.search-container img {
+    width: 50px;
+    height: auto;
+}
+
+.search-container input {
+    outline: none;
+
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.suggestions {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+    background: white;
+}
+.suggestions li {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
     </style>
 </head>
 <body>
-    <div class="barra">
-        <img src="assets/search.png" alt="">
-        <input type="text" placeholder="Search">
+    <div class="search-container">
+        
+        <input 
+            type="text" 
+            id="search-bar" 
+            placeholder="Search" 
+            oninput="showSuggestions(this.value)"
+        />
+        <ul id="suggestions-list" class="suggestions hidden"></ul>
     </div>
+
+    <script>
+// script.js
+
+// Lista de sugerencias personalizadas
+const suggestions = [
+    {text:"Laboratorio computo 1", html:"tablasHorario/lab1.html"},
+    {text:"Laboratorio computo 2", html:"tablasHorario/lab2.html"},
+    {text:"Laboratorio computo 3", html:"tablasHorario/lab3.html"},
+    {text:"Laboratorio computo 4", html:"tablasHorario/lab4.html"},
+    {text:"Laboratorio de Microsoft", html:"tablasHorario/lab1mic.html"},
+    {text:"Toledo", html:"tablasHorario/lab5.html"},
+];
+
+// Función para mostrar sugerencias
+function showSuggestions(query) {
+    const suggestionsList = document.getElementById('suggestions-list');
+    suggestionsList.innerHTML = ""; // Limpiar las sugerencias previas
+
+    if (query.trim() === "") {
+        suggestionsList.classList.add("hidden");
+        return;
+    }
+
+    const filteredSuggestions = suggestions.filter(item =>
+        item.text.toLowerCase().includes(query.toLowerCase())
+    );
+
+    if (filteredSuggestions.length === 0) {
+        suggestionsList.classList.add("hidden");
+        return;
+    }
+
+    filteredSuggestions.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item.text;
+        li.onclick = () => redirectToPage(item.html);
+        suggestionsList.appendChild(li);
+    });
+
+    suggestionsList.classList.remove("hidden");
+}
+
+// Función para redirigir a otra página HTML
+function redirectToPage(htmlFile) {
+    // Cambia toda la ventana al HTML especificado
+    window.top.location.href = htmlFile;
+}
+
+
+// Detectar si el usuario presiona Enter en el campo de texto
+document.getElementById("search-bar").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        const query = event.target.value;
+        const matchedSuggestion = suggestions.find(item =>
+            item.text.toLowerCase() === query.toLowerCase()
+        );
+
+        if (matchedSuggestion) {
+            redirectToPage(matchedSuggestion.html);
+        } else {
+            alert("No se encontró una sugerencia para tu búsqueda.");
+        }
+    }
+});
+
+    </script>
 </body>
 </html>
