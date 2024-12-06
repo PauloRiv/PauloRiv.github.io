@@ -5,6 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Índice de Maestros</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Estilo general */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    /* Contenedor del grid */
+    .maestro-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Dos maestros por fila */
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Tarjetas de maestros */
+    .maestro-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .maestro-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%; /* Foto redondeada */
+      margin-bottom: 10px;
+      background-color: #ccc; /* Espacio reservado para la foto */
+    }
+
+    .maestro-card h2 {
+      font-size: 18px;
+      color: #333;
+      margin: 10px 0 5px;
+    }
+
+    .maestro-card p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <div style="display: flex;">
@@ -17,18 +73,35 @@
       <iframe src="../searchBar.html" frameborder="0" style="width: 100%; height: 60px;"></iframe>
 
       <!-- Índice de maestros -->
-      <h1 style="text-align: center; color: #333;">Lista de Maestros</h1>
-      <ul style="list-style-type: none; padding: 0; max-width: 600px; margin: 0 auto;">
-        <li style="margin: 10px 0;">
-          <a href="toledo.html" style="text-decoration: none; font-size: 18px; color: #555;">Raúl Toledo - Programación</a>
-        </li>
-        <li style="margin: 10px 0;">
-          <a href="maestro.html" style="text-decoration: none; font-size: 18px; color: #555;">Maestro 2</a>
-        </li>
-        <li style="margin: 10px 0;">
-          <a href="maestro.html" style="text-decoration: none; font-size: 18px; color: #555;">Maestro 3</a>
-        </li>
-      </ul>
+      <h1>Lista de Maestros</h1>
+      <div class="maestro-container">
+        <!-- Maestro 1 -->
+        <a href="toledo.html" style="text-decoration: none; color: inherit;">
+          <div class="maestro-card">
+            <img src="../assets/toledo.png" alt="Raúl Toledo">
+            <h2>Raúl Toledo</h2>
+            <p>Programación</p>
+          </div>
+        </a>
+      
+        <!-- Maestro 2 -->
+        <a href="maestro2.html" style="text-decoration: none; color: inherit;">
+          <div class="maestro-card">
+            <img src="assets/maestro2.jpg" alt="Maestro 2">
+            <h2>Maestro 2</h2>
+            <p>Matemáticas</p>
+          </div>
+        </a>
+      
+        <!-- Maestro 3 -->
+        <a href="maestro3.html" style="text-decoration: none; color: inherit;">
+          <div class="maestro-card">
+            <img src="assets/maestro3.jpg" alt="Maestro 3">
+            <h2>Maestro 3</h2>
+            <p>Física</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </body>
